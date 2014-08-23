@@ -12,7 +12,8 @@ fi
 shift
 
 # VERSION is always handled by this script, the value sourced by constants.sh
-.  constants.sh
+ DIR="$( cd "$( dirname "$0" )" && pwd )"
+.  $DIR/constants.sh
 
 # copy template locally as "Dockerfile"
 cp $TEMPLATE Dockerfile
